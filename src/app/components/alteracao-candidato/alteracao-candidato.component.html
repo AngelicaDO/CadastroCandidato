@@ -1,0 +1,125 @@
+<div class="borda">
+    <h2 class="text-dark text-center">Alterar Dados do Candidato</h2>
+    <form>
+      <div>
+        <input type="hidden" name="id" [(ngModel)]="candidato.id">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.nome"
+          name="nome"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cpf:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.cpf"
+          name="cpf"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Data de Nascimento:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.dataNascimento"
+          name="dataNascimento"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Id Sexo:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.idSexo"
+          name="idSexo"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Id Escolaridade:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.idEscolaridade"
+          name="idEscolaridade"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Email:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.email"
+          name="email"
+        />
+      </div>
+          <div class="mb-3">
+        <label class="form-label"> Telefone:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.telefone"
+          name="telefone"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Logradouro</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.logradouro"
+          name="logradouro"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Cidade:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.cidade"
+          name="cidade"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Numero:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.numero"
+          name="numero"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Cep:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.cep"
+          name="cep"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label"> Uf:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="candidato.uf"
+          name="uf"
+        />
+      </div>
+
+      <div>
+        <button class="btn btn-primary" (click)="alterar(candidato)">
+          Alterar Candidato
+        </button>
+        |
+        <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+      </div>
+    </form>
+  </div>
+  

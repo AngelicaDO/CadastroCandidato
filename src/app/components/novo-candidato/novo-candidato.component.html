@@ -1,0 +1,67 @@
+
+
+ <div class="borda">
+  <h2 class="text-dark text-center" >Cadastre-se</h2>
+  <form>
+      <div class="mb-3">
+          <label class="form-label">NOME</label>
+          <input type="text" class="form-control" [(ngModel)]="candidato.nome"   name="nome"/>
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label">CPF</label>
+          <input type="text" class="form-control" [(ngModel)]="candidato.cpf"   name="cpf"/>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">DATA DE NASCIMENTO</label>
+          <input type="date" class="form-control" [(ngModel)]="candidato.dataNascimento"   name="dataNascimento"/>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">LOGRADOURO</label>
+          <input type="text" class="form-control" [(ngModel)]="candidato.logradouro"   name="logradouro"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input type="text" class="form-control" [(ngModel)]="candidato.cep"   name="Cep">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">CIDADE</label>
+      <input type="text" class="form-control" [(ngModel)]="candidato.cidade"   name="Cidade"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">NUMERO</label>
+    <input type="text" class="form-control" [(ngModel)]="candidato.numero"   name="numero"/>
+</div>
+<div class="mb-3">
+   <label  class="form-label" >SEXO</label>
+   <select class="form-control" [(ngModel)]="candidato.idSexo"  name="sexo">
+      <option value="">SELECIONE</option> 
+      <option  *ngFor="let s of sexos" [value]="s.id"> {{s.descricao}}</option>
+  </select> 
+  </div>
+  <div class="mb-3">
+    <label class="form-label">ESCOLARIDADE</label>
+    <select  class="form-control" [(ngModel)]="candidato.idEscolaridade" name="escolaridade">
+        <option value="">SELECIONE</option> 
+        <option *ngFor="let e of escolaridades" [value]="e.id">{{e.descricao}}</option>
+    </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">TELEFONE</label>
+      <input type="text" class="form-control" [(ngModel)]="candidato.telefone"   name="telefone"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">EMAIL</label>
+    <input type="text" class="form-control" [(ngModel)]="candidato.email"   name="email"/>
+</div>
+<div class="mb-3">
+  <label class="form-label">UF</label>
+  <input type="text" class="form-control" [(ngModel)]="candidato.uf"   name="uf"/>
+</div>
+      <div>
+        <button class="btn btn-danger" (click)="incluir(candidato)">Incluir</button> |
+        <button class="btn btn-danger" (click)="voltar()">Voltar</button>
+      </div>
+  </form>
+</div>
+

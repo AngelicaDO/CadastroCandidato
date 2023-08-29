@@ -1,0 +1,38 @@
+<app-candidato></app-candidato>
+
+<div class="margem-superior">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Data Nascimento</th>
+                <th>Telefone</th>
+                <th></th>
+  
+                
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let c of candidato"  >
+              
+                <td>{{c.id}}</td>
+                <td>{{c.nome}}</td>
+                <td>{{c.cpf}}</td>
+                <td>{{c.dataNascimento | date: 'MM/dd/yyyy'}}</td>
+                <td>{{c.telefone}}</td>
+                <td>
+                    <a routerLink="/alteracao-candidato/{{c.id}}*">
+                        <i class="bi bi-pencil"></i>
+                    </a>  &nbsp;
+                    <a routerLink="/remocao/candidato/{{c.id}}">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</div>
